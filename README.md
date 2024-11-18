@@ -14,7 +14,7 @@ This is a dynamic memory allocator that utilizes simple techniques:
 - Immediate coalescing:
   - When a block is freed, the allocator checks if the adjacent blocks (in both sides) are free and coalesces them.
 - Splitting:
-  - When a block is allocated, the allocator checks if the block is large enough to be split into two blocks.
+  - When a free block is selected for an allocation, the allocator checks if the block is large enough to be split into two blocks.
 - sbrk:
   - The allocator uses the sbrk system call to request more memory from the kernel when the heap is full.
 - Alignment:
